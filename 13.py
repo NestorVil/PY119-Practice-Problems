@@ -49,6 +49,21 @@ print(unscramble('phyarunstola', 'pythonrules') == False)
 print(unscramble('boldface', 'coal') == True)
 
 
+def unscramble(first, second):
+    running = [chara for chara in first if chara in second]
+
+    compare_dict1 = {chara:first.count(chara) for chara in running}
+    compare_dict2 = {chara:second.count(chara) for chara in second}
+
+    return compare_dict1 == compare_dict2
+
+
+
+
+
+
+
+
 def can_be_rearranged(str1, str2):
     """
     Checks if some characters in str1 can be rearranged to match str2.
